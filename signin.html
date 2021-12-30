@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Identify:</th>
+            <td><input type="text" placeholder="admin, null, etc." id="name"></td>
+        </tr>
+        <tr>
+            <th>Password:</th>
+            <td><input type="password" id="pass"></td>
+        </tr>
+    </table>
+    <button onclick="signin()">Sign in</button>
+</body>
+</html>
+<script>
+    function signin(){
+        let ten=document.getElementById('name').value;
+        let mk=document.getElementById('pass').value;
+        if (ten=="admin"){
+            if (mk=="246810"){
+                alert('Welcome!');
+            }
+            else if (mk==null){
+                alert('Canceled.');
+            }
+            else{
+                alert('Wrong password');
+            }
+        }
+        else if (ten==null){
+            alert('Canceled');
+        }
+        else{
+            alert("I don't know you");
+        }
+    }
+</script>
